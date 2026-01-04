@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read access to submissions
+    match /submissions/{submission} {
+      allow read: if true;
+      // Allow anyone to create or update submissions
+      // You might want to add more strict rules in production
+      allow create, update: if true;
+    }
+    
+    // Basic security rule for votes collection
+    match /votes/{vote} {
+      // Implement more specific validation as needed
+      allow create: if request.auth == null;
+      allow read: if true;
+    }
+  }
+}
