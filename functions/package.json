@@ -1,0 +1,23 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@socket.io/admin-ui": "^0.5.1",
+    "fastify": "^4.29.1",
+    "firebase-admin": "^12.0.0",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
